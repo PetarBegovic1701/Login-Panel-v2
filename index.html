@@ -1,0 +1,85 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Login portfolio item</title>
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+        <link href="font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+    <body>
+        <div class="col-xl-5 col-lg-6 col-md-8 col-sm-7 mx-auto my-4">
+            <form action="Login" method="post" class="form-horizontal form-body shadow-background " id="autofill-override">
+                <div class="row mx-0 py-1 panel-top">
+                    <div class="col-6 text-muted">
+                        <h1>Log in</h1>
+                    </div>
+                    <div class="col-6 text-muted">
+                        <h1 class="float-right mr-2">Logo</h1>
+                    </div>
+                </div>
+                <div class="pb-3 pt-2 panel-body">
+                    <!-- user email -->
+                    <div class="form-group col-md-11 mx-auto">
+                        <label asp-for="Email" class="text-muted"></label>
+                        <div class="input-group  autofill-override">
+                            <span class="input-group-addon fa-fix"><i class="fa fa-envelope fa-fw"></i></span>
+                            <input class="form-control custom-input text-indent text-muted" type="email" placeholder="E-mail" required autocomplete="off" validate />
+                        </div>
+                    </div>
+                    <!-- user password -->
+                    <div class="form-group col-md-11 mx-auto">
+                        <label asp-for="Password" class="text-muted"></label>
+                        <div class="input-group autofill-override">
+                            <span class="input-group-addon fa-fix"><i class="fa fa-lock fa-fw"></i></span>
+                            <input class="form-control custom-input  text-indent text-muted" type="password" placeholder="Password" />
+                        </div>
+                        <span asp-validation-for="Password" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="px-4 pt-3 pb-2 panel-bottom ">
+                    <div class="row">
+                        <div class="col-5 form-group text-left mx-0 pl-3 pr-0">
+                            <label><input type="checkbox" name="RememberMe" id="RememberMe" value="true">Remember me </label>
+                        </div>
+                        <div class="col-7 form-group text-right mx-0 pr-3 pl-0">
+                            <button type="submit" class="btn btn-secondary btn-responsive btn-custom">Log in</button>
+                        </div>
+                    </div>
+                    <div class="clearfix"></div>
+                    <p class="float-left col-md-6 col-sm-12 text-center text-md-left p-md-0">   <i class="fa fa-user fa-fw text-muted"></i>
+                        <a href="#">Register as a new user?</a>
+                    </p>
+                    <p class="float-right col-md-6 col-sm-12 text-center text-md-right p-md-0">
+                        <a href="#">Forgot your password?</a>
+                        <i class="fa fa-key fa-fw text-muted"></i>
+                    </p>
+                    <div class="clearfix"></div>
+                </div>
+            </form>
+        </div>
+        <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6 pt-4 mx-auto text-center">
+            <span class="text-muted py-5">or use another service to log in</span>
+            <hr class="hr-deco" />
+            <div class="social-media d-md-flex mt-3 d-sm-block mx-auto">
+                <button type="submit" class="custom-button btn-sm media-body mx-md-1 mx-sm-auto my-1 " value="LinkedIn" title="Log in using your Linkedin account">
+                            <i class="fa fa-linkedin fa-fw fa-2x" aria-hidden="true"></i>
+                </button>
+                <button type="submit" class="custom-button btn-sm media-body mx-md-1 mx-sm-auto my-1 " value="Microsoft" title="Log in using your Linkedin account">
+                            <i class="fa fa-windows fa-fw fa-2x" aria-hidden="true"></i>
+                </button>
+                <button type="submit" class="custom-button btn-sm media-body mx-md-1 mx-sm-auto my-1 " value="Google" title="Log in using your Linkedin account">
+                            <i class="fa fa-google fa-fw fa-2x" aria-hidden="true"></i>
+                </button>
+                <button type="submit" class="custom-button btn-sm media-body mx-md-1 mx-sm-auto my-1 " value="Twitter" title="Log in using your Linkedin account">
+                            <i class="fa fa-twitter fa-fw fa-2x" aria-hidden="true"></i>
+                </button>
+                <button type="submit" class="custom-button btn-sm media-body mx-md-1 mx-sm-auto my-1 " value="Facebook" title="Log in using your Linkedin account">
+                            <i class="fa fa-facebook fa-fw fa-2x" aria-hidden="true"></i>
+                </button>
+            </div>
+        </div>
+    </body>
+</html>
